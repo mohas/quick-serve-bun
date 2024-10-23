@@ -1,0 +1,20 @@
+{
+  "name": "quick-serve-bun",
+  "module": "src/index.ts",
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently \" bun --watch run ./src/index.ts\" \"bunx tailwindcss -i ./src/input.css -o ./src/theme.css --watch\"",
+    "build": "bunx tailwindcss -i ./src/input.css -o ./src/theme.css && bun build --build --minify-whitespace --minify-syntax --target=bun  ./src/index.ts --outdir buid"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "concurrently": "^9.0.1",
+    "tailwindcss": "^3.4.14"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "sharp": "^0.33.5"
+  }
+}
