@@ -4,7 +4,8 @@
   "type": "module",
   "scripts": {
     "dev": "concurrently \" bun --watch run ./src/index.ts\" \"bunx tailwindcss -i ./src/input.css -o ./src/theme.css --watch\"",
-    "build": "bunx tailwindcss -i ./src/input.css -o ./src/theme.css && bun build --build --minify-whitespace --minify-syntax --target=bun  ./src/index.ts --outdir buid"
+    "build": "bunx tailwindcss -i ./src/input.css -o ./src/theme.css && bun build --build --minify-whitespace --minify-syntax --target=bun  ./src/index.ts --outdir buid",
+    "build-css": "bunx tailwindcss -i ./src/input.css -o ./src/theme.css"
   },
   "devDependencies": {
     "@types/bun": "latest",
